@@ -30,7 +30,7 @@ public class Ejercicio9 {
    } else {
      System.out.println("Usted ha salido correctamente");
     // esto es para finalizar el bucle// 
-    i = -2;
+    i = 5;
   }
      }
    
