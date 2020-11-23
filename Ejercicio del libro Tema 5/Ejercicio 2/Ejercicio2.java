@@ -11,9 +11,11 @@ public class Ejercicio2 {
     int i = 0;
     
     while(i <= 100){
-     System.out.println(i);
+      System.out.println(i);
       i+= 5;
-    }
-  }
+      }
+    
+		
+	}
 }
 

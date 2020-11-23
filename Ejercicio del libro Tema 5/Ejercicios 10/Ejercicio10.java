@@ -1,32 +1,33 @@
 /*
-*@utor Jesús María Olalla Pérez
+ *@utor Jesús María Olalla Pérez
  */
 
 import java.util.Scanner;
 public class Ejercicio10 {
 	
 	public static void main (String args[]) {
-		
+    
     Scanner s = new Scanner(System.in);
-    double num_uno = 0;
-    double suma = 0;
-    double contador = 0;
-
-
+    int num_uno = 0;
+    int aux = 0;
+    int contador = 0;
     
-    
-    while ( num_uno >= 0){
-      System.out.println("Escribe un número positivo. (En el caso de parar introduzca un número negativo)");
+    do{
+      System.out.println("Introduce un número positivo (Para finalizar introduce un número negativo)");
       num_uno = s.nextInt();
-      contador++;
-      suma = suma + num_uno;
       
-      
+      if(num_uno >= 0){
+        System.out.println("Usted ha introducido un número positivo");
+        aux+= num_uno;
+        num_uno = 0;
+        contador++;
+        
+      }else {
+        System.out.println("Usted ha introducido un número negativo");
       }
-      System.out.println("La media de los números positivos introducidos son : " + suma/contador);
+    } while (num_uno >= 0);
     
-    
-    
+		System.out.println("La media del número es: " + aux / contador);
 	}
 }
 
