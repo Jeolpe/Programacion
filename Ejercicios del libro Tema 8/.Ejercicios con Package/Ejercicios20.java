@@ -3,7 +3,7 @@
  */
 import array.ArrayUni;
 import java.util.Scanner;
-public class Ejercicio22 {
+public class Ejercicios20 {
 	
 	public static void main (String args[]) {
     
@@ -24,9 +24,6 @@ public class Ejercicio22 {
     for(int num:a){
       System.out.printf("%4d",num);
     }
-    
-    System.out.println("");
-    System.out.print("El número más grande de todos Arrays es: ");
-    System.out.print(array.ArrayUni.maximoArrayUni(a));
 	}
 }
+
