@@ -15,21 +15,23 @@ public class ExamenA2 {
     tamanio = sc.nextInt();
     
     int[] a = new int[tamanio];
+    int count = 0;
     
-    for(int i = 0; i < a.length;){
+    for(int i = 0; i < a.length;i++){
       System.out.print("Introduzca un valor aleatorio base: ");
+        count = 0;
       do{
-      num = sc.nextInt();
-      if(!esRepetido(a,num)){
+        num = sc.nextInt();
+       if(!esRepetido(a,num)){
         a[i] = num;
-        i++;
+        count = 1;
         }else{
         System.out.print("Dato repetido. Introduzca un valor aleatorio base: "); 
        } 
+     }while(count == 0);
         
-      }while(!esRepetido(a,num));
-      }
-      
+    }
+    
       mostrarArrayUni(a);
       System.out.println("");
       System.out.println("");
@@ -64,11 +66,12 @@ public class ExamenA2 {
     public static boolean esRepetido(int[] uni, int x){
       boolean repetido = false;
       for(int i = 0; i < uni.length; i++){
-        if(uni[i] == x) repetido = true;
-          
-        }
-        return repetido;
+        if(uni[i] == x){ 
+        repetido = true;
+         }   
       }
+        return repetido;
+    }
       
       public static void mostrarArrayUni(int[] uni){
         System.out.println("");
